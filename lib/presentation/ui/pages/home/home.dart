@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
         middle: Text('Country App'),
       ),
       child: BlocProvider<HomeBloc>(
-        create: (context) => HomeBloc()..add(InitialHomePageEvent(context: context)),
+        create: (context) => HomeBloc()..add(InitialHomePageEvent()),
         child: SafeArea(
           bottom: false,
           child: Container(
