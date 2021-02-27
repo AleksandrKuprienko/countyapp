@@ -1,11 +1,11 @@
 # countyapp
  Europe map
 
-CleanArchitecture
-Retrofit
-Bloc
-Svg
-Cupertino widgets
+CleanArchitecture |
+ Retrofit |
+ Bloc |
+ Svg |
+ Cupertino widgets
 
 ![Home screen](https://github.com/AleksandrKuprienko/countyapp/blob/main/screen2.png)
 
