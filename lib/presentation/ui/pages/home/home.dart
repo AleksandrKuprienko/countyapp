@@ -1,8 +1,12 @@
+import 'dart:convert';
+
+import 'package:countyapp/data/entities/flutter_widget_data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_widgetkit/flutter_widgetkit.dart';
 
 import 'package:countyapp/presentation/ui/pages/home/bloc/home_bloc.dart';
 import 'package:countyapp/presentation/ui/pages/country/country.dart';
@@ -37,6 +41,9 @@ class HomePage extends StatelessWidget {
                               ),
                             ),
                           );
+                          WidgetKit.setItem('widgetData', jsonEncode(FlutterWidgetData(state.contry[index].name)),
+                              'group.com.akuper');
+                          WidgetKit.reloadAllTimelines();
                         },
                         child: Container(
                           padding: const EdgeInsets.only(bottom: 10, top: 10),

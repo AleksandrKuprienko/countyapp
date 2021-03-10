@@ -20,7 +20,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     final DataManager _dataManager = DataManager();
 
     if (event is InitialHomePageEvent) {
-      List<Country> country = await _dataManager.getCountry().catchError((e) => print(e.toString()));
+      List<Country> country = await _dataManager.getCountry().catchError((e) => print(e));
       yield ResponseSuccessState(contry: country);
     }
   }
